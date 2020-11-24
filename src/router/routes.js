@@ -3,7 +3,7 @@ import Tasks from "@/views/tasks";
 
 export default [
   {
-    path: "*",
+    path: "/auth",
     name: "auth",
     title: "Acessar",
     component: Login,

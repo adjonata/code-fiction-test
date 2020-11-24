@@ -15,8 +15,8 @@ const router = new VueRouter({
 router.beforeEach(async (to, from, next) => {
   const IS_LOGED = await verifyAuth();
 
-  if(to.path === '/' && !IS_LOGED) return next('/auth');
-  if(to.path === '/auth' && IS_LOGED) return next('/');
+  if(to.name === 'tasks' && !IS_LOGED) return next('/auth');
+  if(to.name === 'auth' && IS_LOGED) return next('/');
 
   next();
 });
